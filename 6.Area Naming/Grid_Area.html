@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid </title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(255, 255, 255);
+            font-size: large;
+        }
+
+        .container {
+            background: rgb(246, 246, 246);
+            width: 600px;
+            margin: 50px 0 0 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 150px 50px 150px 100px 50px;
+
+            grid-template-areas: " Header Header Header "
+                " . Menu . "
+                " Box1 Box2 Sidebar"
+                " Box3 Box4 Sidebar"
+                " Footer Footer Footer ";
+
+            grid-gap: 20px 20px;
+        }
+
+        .Header {
+            background: red;
+            grid-area: Header;
+
+
+        }
+
+        .Menu {
+            background: orange;
+            grid-area: Menu;
+
+
+        }
+
+        .Box1 {
+            background: green;
+            grid-area: Box1;
+
+        }
+
+        .Box2 {
+            background: rgb(0, 119, 255);
+            grid-area: Box2;
+
+        }
+
+        .Box3 {
+            background: rgb(13, 131, 139);
+            grid-area: Box3;
+
+        }
+
+        .Box4 {
+            background: rgb(255, 102, 0);
+            grid-area: Box4;
+
+        }
+
+        .Sidebar {
+            background: blue;
+            grid-area: Sidebar;
+
+
+        }
+
+        .Footer {
+            background: purple;
+            grid-area: Footer;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Grid </h1>
+    <div class="container">
+        <div class="item Header">Header</div>
+        <div class="item Menu">Menu</div>
+        <div class="item Box1">Box1</div>
+        <div class="item Box2">Box2</div>
+        <div class="item Box3">Box3</div>
+        <div class="item Box4">Box4</div>
+        <div class="item Sidebar">Sidebar</div>
+        <div class="item Footer">Footer</div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid </title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(255, 255, 255);
+            font-size: large;
+        }
+
+        .container {
+            background: rgb(230, 230, 230);
+            width: 600px;
+            margin: 50px auto 0;
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 200px);
+            grid-gap: 15px;
+
+        }
+
+        .item {
+            padding: 7px;
+
+        }
+
+        .item1 {
+            background: red;
+
+        }
+
+        .item2 {
+            background: orange;
+
+        }
+
+        .item3 {
+            background: green;
+
+        }
+
+        .item4 {
+            background: rgb(69, 2, 177);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+
+        }
+
+        .item4>div {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: black;"> Nested Grids Tutorial</h1>
+    <div class="container">
+        <div class="item item1">First </div>
+        <div class="item item2">Second </div>
+        <div class="item item3">Third</div>
+        <div class="item item4">
+            <div class="sub1">A</div>
+            <div class="sub2">B</div>
+            <div class="sub3">C</div>
+            <div class="sub4">D</div>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>

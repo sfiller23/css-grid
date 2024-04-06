@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid </title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(255, 255, 255);
+            font-size: large;
+        }
+
+        .container {
+            background: rgb(230, 230, 230);
+            width: 400px;
+            margin: 50px auto 0;
+            display: grid;
+            grid-template-columns: repeat(2, 200px);
+            grid-template-rows: repeat(2, 200px);
+        }
+
+        .item {
+            padding: 7px;
+            max-width: 200px;
+        }
+
+        .item1 {
+            background: red;
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+
+            z-index: 1;
+        }
+
+        .item2 {
+            background: orange;
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+
+            z-index: 2;
+        }
+
+        .item3 {
+            background: green;
+
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+            z-index: 3;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: black;"> Overlapping Grid Items</h1>
+    <div class="container">
+        <div class="item item1">First Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ipsum quam,
+            molestias porro obcaecati natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ipsum quam,
+            molestias porro obcaecati natus. </div>
+        <div class="item item2">Second Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ipsum quam,
+            molestias porro obcaecati natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ipsum quam,
+            molestias porro obcaecati natus.</div>
+        <div class="item item3">Third Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ipsum quam,
+            molestias porro obcaecati natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ipsum quam,
+            molestias porro obcaecati natus.</div>
+    </div>
+</body>
+
+</html>
